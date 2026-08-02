@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" width="300" height="60">
+<g transform="translate(0,6) scale(0.48)"><path d="M16 0 H66 L100 34 V84 A16 16 0 0 1 84 100 H16 A16 16 0 0 1 0 84 V16 A16 16 0 0 1 16 0 Z" fill="#FFFFFF"></path><path d="M66 0 L100 34 H66 Z" fill="#EF8B44"></path><text x="48" y="76" text-anchor="middle" font-family="Archivo, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="-2"><tspan fill="#16263F">C</tspan><tspan fill="#5B7EA6">B</tspan></text></g>
+<text x="62" y="41" font-family="Archivo, Helvetica, sans-serif" font-size="30" font-weight="500" letter-spacing="-0.9" fill="#FFFFFF">Carrier<tspan font-weight="700">Basis</tspan></text></svg>

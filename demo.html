@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://carrierbasis.com/demo.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --nw-blue:#305D94; --nw-dark:#1F487C; --nw-action:#3182CE; --nw-orange:#ED8936;
@@ -27,7 +27,8 @@
   a:focus-visible,button:focus-visible{outline:3px solid #9DBBDD;outline-offset:2px}
 
   .head{width:100%;max-width:880px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px;color:#fff}
-  .wordmark{font-weight:800;font-size:18px}
+  .wordmark{font-weight:800;font-size:18px;display:flex;align-items:center}
+  .topbar-logo{height:28px;width:auto}
   .wordmark span{color:#9DBBDD}
   .head .note{font-size:12.5px;color:#9DBBDD}
 
@@ -107,7 +108,7 @@
 <body>
 
 <div class="head">
-  <div class="wordmark" aria-label="CarrierBasis demo"><span aria-hidden="true">Carrier<span>Basis</span> <span style="font-weight:500;font-size:13px;color:#C6D6E8">· demo</span></span></div>
+  <div class="wordmark" aria-label="CarrierBasis demo"><svg class="topbar-logo" viewBox="0 0 300 60" role="img" aria-label="CarrierBasis" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,6) scale(0.48)"><path d="M16 0 H66 L100 34 V84 A16 16 0 0 1 84 100 H16 A16 16 0 0 1 0 84 V16 A16 16 0 0 1 16 0 Z" fill="#FFFFFF"></path><path d="M66 0 L100 34 H66 Z" fill="#EF8B44"></path><text x="48" y="76" text-anchor="middle" font-family="Archivo, Helvetica, sans-serif" font-size="52" font-weight="700" letter-spacing="-2"><tspan fill="#16263F">C</tspan><tspan fill="#5B7EA6">B</tspan></text></g><text x="62" y="41" font-family="Archivo, Helvetica, sans-serif" font-size="30" font-weight="500" letter-spacing="-0.9" fill="#FFFFFF">Carrier<tspan font-weight="700">Basis</tspan></text></svg><span style="font-weight:500;font-size:13px;color:#C6D6E8;margin-left:6px">· demo</span></div>
   <div class="note">Illustrative walkthrough · interface simplified · all data fictional</div>
 </div>
 
