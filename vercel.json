@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/login",
+      "destination": "https://app.carrierbasis.com/login",
+      "permanent": false
+    }
+  ]
+}
