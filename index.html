@@ -64,7 +64,7 @@
         {
           "@type": "Question",
           "name": "Is this legal advice? Does it guarantee protection from liability?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. It makes your carrier-selection process consistent, complete, and preserved — organized around the safety factors courts are examining in broker negligent-selection cases." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. It makes your carrier-selection process consistent, documented, and complete against your configured policy — organized around the safety factors courts are examining in broker negligent-selection cases." }
         },
         {
           "@type": "Question",
@@ -117,6 +117,15 @@
   section{padding:88px 0}
   a{color:var(--nw-action)}
   a:focus-visible,button:focus-visible{outline:3px solid var(--nw-action);outline-offset:2px}
+
+  /* Beta banner */
+  .beta-bar{background:var(--charcoal);color:#E7EEF6;font-size:13.5px;text-align:center;padding:9px 20px;line-height:1.5}
+  .beta-bar b{color:#fff;font-weight:600}
+  .beta-bar a{color:#9DBBDD;font-weight:600;text-decoration:none;white-space:nowrap}
+  .beta-bar a:hover{text-decoration:underline}
+  .hero-tertiary{margin-top:20px;font-size:15px;color:#C6D6E8}
+  .hero-tertiary a{color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
+  .hero-tertiary a:hover{border-bottom-color:#fff}
 
   h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;color:var(--nw-dark);line-height:1.25;letter-spacing:-0.01em;margin-bottom:18px}
   .lede{font-size:19px;color:var(--gray-med);max-width:46em}
@@ -243,9 +252,10 @@
 <body>
 
 <!-- ============ HERO ============ -->
+<div class="beta-bar"><b>CarrierBasis is in Beta.</b> We're inviting a small group of brokerages as design partners. <a href="mailto:contact@workanewway.com?subject=CarrierBasis%20design%20partner">Ask about joining →</a></div>
 <header class="hero">
   <div class="wrap">
-    <p class="wordmark">Carrier<span>Basis</span></p>
+    <p class="wordmark" aria-label="CarrierBasis"><span aria-hidden="true">Carrier<span>Basis</span></span></p>
     <p class="eyebrow">Carrier Vetting Software for Freight Brokers</p>
     <div class="transcript">
       <span class="q-mark">Q.</span>
@@ -256,6 +266,7 @@
       <a class="btn btn--primary" href="#record">View a sample compliance record</a>
       <a class="btn btn--ghost" href="demo.html">See it work — 60-second demo</a>
     </div>
+    <p class="hero-tertiary">Referred by an attorney, insurer, or another broker? <a href="mailto:contact@workanewway.com?subject=CarrierBasis%20design%20partner">Ask about the design-partner program →</a></p>
     <p class="trust"><span>Hosted on SOC 2 Type 2 and ISO 27001 certified infrastructure</span><span class="sep">·</span><span>Records fingerprinted with SHA-256</span><span class="sep">·</span><span>Brokerage and carrier data is never sold</span></p>
   </div>
 </header>
@@ -273,7 +284,7 @@
       </div>
       <div class="pillar">
         <h3>Guides the review</h3>
-        <p>Concerns surface with context and history. Nothing required gets skipped. Nothing gets approved silently.</p>
+        <p>Concerns surface with context and history. Every check your policy requires must be completed or expressly resolved before approval. Nothing gets approved silently.</p>
       </div>
       <div class="pillar">
         <h3>Records the reasoning</h3>
@@ -319,7 +330,7 @@
 <section class="artifact" id="record">
   <div class="wrap">
     <p class="eyebrow" style="color:#9DBBDD;margin-bottom:14px">The artifact</p>
-    <h2>Every load gets a carrier compliance record.</h2>
+    <h2>Every carrier selection gets a load-specific compliance record.</h2>
     <p class="lede">Not another carrier score. Not another data feed. A complete, load-specific record of the decision:</p>
     <div class="artifact-grid">
       <ul class="contents">
@@ -375,7 +386,7 @@
   <div class="wrap">
     <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Cadence</p>
     <h2>Carrier vetting is not a one-time event.</h2>
-    <p class="lede">Courts haven't published a required refresh interval. But the question that keeps coming back: was your information reasonably current when you decided?</p>
+    <p class="lede">Courts haven't prescribed a universal refresh interval. One recurring issue is whether the information was reasonably current when the carrier was selected.</p>
     <table>
       <thead><tr><th scope="col">When</th><th scope="col">What a defensible process does</th></tr></thead>
       <tbody>
@@ -401,13 +412,28 @@
     <p class="lede">Enterprise brokers have counsel, compliance staff, and custom systems. If you're running a small or mid-size brokerage, you have a TMS, some data subscriptions, and whatever discipline survives a busy Friday afternoon. CarrierBasis puts compliance discipline into the daily workflow:</p>
     <ul>
       <li><strong>Works alongside the tools you already use</strong> — it organizes and preserves your process; it doesn't ask you to rip anything out.</li>
-      <li><strong>Syncs with your TMS</strong> so carriers and loads don't get re-keyed.</li>
+      <li><strong>Connects with supported TMS platforms</strong> so carriers and loads don't get re-keyed.</li>
       <li><strong>Runs your policy consistently</strong> — the same on the busiest day of the quarter as in a demo.</li>
     </ul>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- ============ BETA ============ -->
+<section class="fit" id="beta" style="background:var(--paper)">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Design-partner Beta</p>
+    <h2>We're building CarrierBasis with a handful of brokerages.</h2>
+    <p class="lede">CarrierBasis is in active Beta. We're deliberately keeping the group small — working directly with a few brokerages to shape the product around real vetting workflows before opening it more widely. The platform is production-grade: your records are sealed, preserved, and yours. What's early is the company, not the integrity of your evidence.</p>
+    <ul>
+      <li><strong>Direct line to the founder</strong> — you're shaping what gets built, not filing tickets into a queue.</li>
+      <li><strong>Early-partner terms</strong> — meaningful advantages for the brokerages who help prove this out.</li>
+      <li><strong>A real safety net now</strong> — a load-specific compliance record for every carrier you select, from day one.</li>
+    </ul>
+    <div class="cta-row" style="margin-top:26px">
+      <a class="btn btn--primary" style="background:var(--nw-action)" href="mailto:contact@workanewway.com?subject=CarrierBasis%20design%20partner">Ask about becoming a design partner</a>
+    </div>
+  </div>
+</section>
 <section class="faq" id="faq">
   <div class="wrap wrap--narrow">
     <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Questions</p>
@@ -418,7 +444,7 @@
     </details>
     <details>
       <summary>Is this legal advice? Does it guarantee protection from liability?</summary>
-      <p>No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. What it does is make your carrier-selection process consistent, complete, and preserved — organized around the safety factors courts are examining in broker negligent-selection cases.</p>
+      <p>No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. What it does is make your carrier-selection process consistent, documented, and complete against your configured policy — organized around the safety factors courts are examining in broker negligent-selection cases.</p>
     </details>
     <details>
       <summary>What does "sealed" mean?</summary>
