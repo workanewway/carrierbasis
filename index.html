@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarrierBasis — Carrier Vetting Software for Freight Brokers</title>
+<meta name="description" content="CarrierBasis applies your carrier vetting policy, guides the review, and seals a load-specific carrier compliance record — the basis for every carrier you select, written, dated, and preserved.">
+<link rel="canonical" href="https://carrierbasis.com/">
+<meta property="og:title" content="CarrierBasis — Carrier Vetting Software for Freight Brokers">
+<meta property="og:description" content="Your data tools tell you about the carrier. CarrierBasis documents your decision.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://carrierbasis.com/">
+<meta property="og:image" content="https://carrierbasis.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://carrierbasis.com/og-image.png">
+<meta name="twitter:title" content="CarrierBasis — Carrier Vetting Software for Freight Brokers">
+<meta name="twitter:description" content="Your data tools tell you about the carrier. CarrierBasis documents your decision.">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-063XHMYB9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-063XHMYB9K');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "NewWay Digital",
+      "url": "https://www.workanewway.com",
+      "email": "contact@workanewway.com"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "CarrierBasis",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Carrier vetting software for freight brokers. Applies your carrier-selection policy, guides the review, and seals a load-specific carrier compliance record.",
+      "url": "https://carrierbasis.com/",
+      "publisher": { "@type": "Organization", "name": "NewWay Digital" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does CarrierBasis replace Highway, Carrier411, or my other data tools?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Those services provide information about carriers. CarrierBasis applies your policy to the information you have, guides the review, and preserves the decision as a sealed, load-specific record. Most brokerages keep their existing data subscriptions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this legal advice? Does it guarantee protection from liability?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. It makes your carrier-selection process consistent, complete, and preserved — organized around the safety factors courts are examining in broker negligent-selection cases." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does sealed mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sealed means locked at approval and fingerprinted with a SHA-256 hash, allowing later verification that the record's contents have not changed since commitment." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is recorded as the decision-maker?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The logged-in reviewer who approved the record — a named, authenticated user. Their written basis for the decision is part of the sealed record." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if a carrier has a problem in its history?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An isolated concern does not automatically disqualify a carrier — but it should be reviewed in context and resolved on the record. CarrierBasis documents the judgment rather than hiding everything behind a green light." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a vetting take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Facts are pulled and evaluated automatically — FMCSA authority, safety and inspection history, TMS data, submitted documents — so the reviewer's time goes to judgment, not data gathering. Routine approvals take a few minutes. Reviews involving material concerns take longer because the reviewer is exercising judgment, not clearing a screen." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    /* NewWay-derived palette */
+    --nw-blue:#305D94;
+    --nw-dark:#1F487C;
+    --nw-action:#3182CE;
+    --nw-orange:#ED8936;      /* reserved for the seal only */
+    --ink-navy:#14273F;       /* the stretch: deep evidence navy */
+    --charcoal:#1A202C;
+    --gray-med:#4A5568;
+    --gray-line:#E2E8F0;
+    --paper:#F7FAFC;
+    --white:#FFFFFF;
+    --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:var(--font-sans);color:var(--charcoal);background:var(--white);line-height:1.6;font-size:17px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .wrap--narrow{max-width:820px}
+  section{padding:88px 0}
+  a{color:var(--nw-action)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--nw-action);outline-offset:2px}
+
+  h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;color:var(--nw-dark);line-height:1.25;letter-spacing:-0.01em;margin-bottom:18px}
+  .lede{font-size:19px;color:var(--gray-med);max-width:46em}
+
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  /* ---------- Buttons ---------- */
+  .btn{display:inline-block;font-weight:600;font-size:16px;padding:14px 28px;border-radius:8px;text-decoration:none;border:2px solid transparent}
+  .btn--primary{background:var(--nw-action);color:#fff}
+  .btn--primary:hover{background:#2b74b8}
+  .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+  .btn--ghost:hover{border-color:#fff}
+  .btn--ghost-dark{background:transparent;color:var(--nw-dark);border-color:var(--nw-blue)}
+  .btn--ghost-dark:hover{background:var(--paper)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(168deg,var(--ink-navy) 0%,var(--nw-dark) 100%);color:#fff;padding:104px 0 96px}
+  .hero .eyebrow{color:#9DBBDD}
+  .wordmark{font-size:20px;font-weight:800;letter-spacing:-0.01em;color:#fff;margin-bottom:26px}
+  .wordmark span{color:#9DBBDD}
+  .hero p.eyebrow{margin-bottom:34px}
+  .transcript{border-left:3px solid rgba(255,255,255,.28);padding-left:26px;margin-bottom:30px}
+  .transcript .q-mark{font-family:var(--font-mono);font-size:15px;color:#9DBBDD;display:block;margin-bottom:10px}
+  .transcript .q-text{font-size:clamp(30px,5vw,52px);font-weight:800;line-height:1.12;letter-spacing:-0.015em;max-width:15em}
+  .hero .sub{font-size:19px;line-height:1.65;color:#D7E3F1;max-width:41em;margin-bottom:36px}
+  .hero .sub strong{color:#fff}
+  .trust{margin-top:34px;font-size:13.5px;color:#9DBBDD;letter-spacing:0.01em}
+  .trust span{white-space:nowrap}
+  .trust .sep{margin:0 10px;opacity:.5}
+
+  /* ---------- Gap ---------- */
+  .gap{background:var(--white)}
+  .vendors{font-size:16px;color:var(--gray-med);margin:18px 0 34px;max-width:46em}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin:8px 0 40px}
+  .pillar h3{font-size:17px;font-weight:700;color:var(--nw-dark);margin-bottom:8px}
+  .pillar p{font-size:15.5px;color:var(--gray-med)}
+  .pullline{border-top:1px solid var(--gray-line);border-bottom:1px solid var(--gray-line);padding:26px 0;font-size:21px;font-weight:600;color:var(--nw-blue);text-align:center}
+
+  /* ---------- Workflow ---------- */
+  .flow{background:var(--paper)}
+  .steps{counter-reset:step;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:38px}
+  .step{background:var(--white);border:1px solid var(--gray-line);border-radius:10px;padding:26px 24px;counter-increment:step}
+  .step::before{content:counter(step);display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--nw-blue);color:#fff;font-weight:700;font-size:15px;margin-bottom:14px}
+  .step h3{font-size:18px;font-weight:700;color:var(--nw-dark);margin-bottom:8px}
+  .step p{font-size:15.5px;color:var(--gray-med)}
+  .flow .aside{margin-top:26px;font-size:15px;color:var(--gray-med)}
+
+  /* ---------- Artifact (dark band + specimen card) ---------- */
+  .artifact{background:var(--ink-navy);color:#fff}
+  .artifact h2{color:#fff}
+  .artifact .lede{color:#C6D6E8}
+  .artifact-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;margin-top:44px}
+  .contents li{margin-bottom:14px;font-size:16px;color:#D7E3F1;list-style:none;padding-left:22px;position:relative}
+  .contents li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:2px;background:var(--nw-action)}
+  .contents strong{color:#fff}
+  .artifact .cta-row{margin-top:34px}
+
+  .record{background:#FDFDFB;color:var(--charcoal);border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,.4);padding:26px 26px 22px;font-size:13.5px;max-width:430px;justify-self:center;width:100%}
+  .record .r-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--gray-line);padding-bottom:14px;margin-bottom:14px}
+  .record .r-title{font-weight:700;font-size:14px;color:var(--nw-dark);letter-spacing:0.02em}
+  .record .r-sub{font-family:var(--font-mono);font-size:11.5px;color:var(--gray-med);margin-top:4px}
+  .seal-chip{font-family:var(--font-mono);font-size:11px;font-weight:500;background:var(--nw-orange);color:#3D2308;border-radius:4px;padding:4px 9px;letter-spacing:0.06em;white-space:nowrap}
+  .record dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px}
+  .record dt{color:var(--gray-med);font-size:12.5px}
+  .record dd{font-family:var(--font-mono);font-size:12px;color:var(--charcoal);overflow-wrap:anywhere}
+  .record .r-quote{border-left:3px solid var(--nw-blue);padding:2px 0 2px 12px;margin:14px 0;font-size:13px;color:var(--gray-med);font-style:italic}
+  .record .r-foot{border-top:1px solid var(--gray-line);margin-top:14px;padding-top:12px;font-family:var(--font-mono);font-size:11px;color:var(--gray-med);overflow-wrap:anywhere}
+
+  /* ---------- Legal ---------- */
+  .legal-ctx{background:var(--white)}
+  .legal-ctx p{max-width:46em;margin-bottom:18px}
+  .readmore{font-size:15.5px;font-weight:600}
+
+  /* ---------- Cadence ---------- */
+  .cadence{background:var(--paper)}
+  .cadence table{width:100%;border-collapse:collapse;margin-top:30px;background:var(--white);border:1px solid var(--gray-line);border-radius:10px;overflow:hidden}
+  .cadence th,.cadence td{text-align:left;padding:15px 20px;font-size:15.5px;border-bottom:1px solid var(--gray-line)}
+  .cadence th{background:var(--nw-dark);color:#fff;font-size:13px;letter-spacing:0.08em;text-transform:uppercase}
+  .cadence tr:last-child td{border-bottom:none}
+  .cadence td:first-child{font-weight:600;color:var(--nw-dark);white-space:nowrap}
+  .cadence .links{margin-top:24px;font-size:15.5px}
+
+  /* ---------- Fit ---------- */
+  .fit{background:var(--white)}
+  .fit ul{margin:26px 0 0;max-width:46em}
+  .fit li{margin-bottom:14px;list-style:none;padding-left:22px;position:relative;color:var(--gray-med);font-size:16px}
+  .fit li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:2px;background:var(--nw-blue)}
+  .fit li strong{color:var(--charcoal)}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--paper)}
+  .faq details{background:var(--white);border:1px solid var(--gray-line);border-radius:10px;margin-bottom:12px;padding:0 22px}
+  .faq summary{cursor:pointer;font-weight:600;font-size:16.5px;color:var(--nw-dark);padding:18px 0;list-style:none;position:relative;padding-right:34px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:22px;color:var(--nw-action);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{padding:0 0 20px;color:var(--gray-med);font-size:15.5px;max-width:52em}
+
+  /* ---------- Close ---------- */
+  .close{background:linear-gradient(168deg,var(--nw-dark) 0%,var(--ink-navy) 100%);color:#fff;text-align:left}
+  .close h2{color:#fff;max-width:22em}
+  .close .questions{font-size:18px;color:#C6D6E8;max-width:40em;margin:22px 0 30px;font-style:italic;line-height:1.7}
+  .close .transcript{margin:34px 0 10px}
+  .close .a-text{font-size:clamp(20px,2.8vw,26px);font-weight:600;line-height:1.4;max-width:30em}
+  .tagline{font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-0.01em;margin:36px 0 34px}
+  .tagline .accent{color:#9DBBDD}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink-navy);color:#8FA6C0;padding:38px 0 46px;font-size:13px;border-top:1px solid rgba(255,255,255,.12)}
+  footer p{max-width:62em;margin-bottom:12px}
+  footer a{color:#B9CCE2}
+
+  @media (max-width:820px){
+    section{padding:64px 0}
+    .hero{padding:76px 0 68px}
+    .artifact-grid{grid-template-columns:1fr;gap:40px}
+    .record{justify-self:start}
+    .cadence td:first-child{white-space:normal}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <p class="wordmark">Carrier<span>Basis</span></p>
+    <p class="eyebrow">Carrier Vetting Software for Freight Brokers</p>
+    <div class="transcript">
+      <span class="q-mark">Q.</span>
+      <h1 class="q-text">On what basis did you select this&nbsp;carrier?</h1>
+    </div>
+    <p class="sub">That's a question a broker may have to answer years after the load is delivered. CarrierBasis applies your carrier-selection policy to current facts, guides the review, and seals a load-specific compliance record — so the basis for the decision is already <strong>written, dated, attributed, and preserved</strong>.</p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="#record">View a sample compliance record</a>
+      <a class="btn btn--ghost" href="demo.html">See it work — 60-second demo</a>
+    </div>
+    <p class="trust"><span>Hosted on SOC 2 Type 2 and ISO 27001 certified infrastructure</span><span class="sep">·</span><span>Records fingerprinted with SHA-256</span><span class="sep">·</span><span>Brokerage and carrier data is never sold</span></p>
+  </div>
+</header>
+
+<!-- ============ THE GAP ============ -->
+<section class="gap" id="gap">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">The gap</p>
+    <h2>Your data tools tell you about the carrier.<br>CarrierBasis documents your decision.</h2>
+    <p class="vendors">Highway, Carrier411, Carrier Assure, MyCarrierPortal, SAFER, your TMS — good tools. Keep them. They answer one question: <em>what is known about this carrier?</em> A negligent-selection claim asks a different one: <em>what did you do with what was known?</em> Few brokerages could assemble that answer for a load delivered two years ago — not because they were careless, but because nothing in their stack was built to keep it.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Applies your rules</h3>
+        <p>Your policy — your insurance minimums, your safety thresholds, your high-value requirements — evaluated against current facts, not a vendor's generic score.</p>
+      </div>
+      <div class="pillar">
+        <h3>Guides the review</h3>
+        <p>Concerns surface with context and history. Nothing required gets skipped. Nothing gets approved silently.</p>
+      </div>
+      <div class="pillar">
+        <h3>Records the reasoning</h3>
+        <p>Approval requires an attributed basis for the decision — not a comment buried in an email thread or left undocumented.</p>
+      </div>
+      <div class="pillar">
+        <h3>Seals the record</h3>
+        <p>The complete record is locked at approval and fingerprinted with SHA-256, enabling later verification that its contents haven't changed.</p>
+      </div>
+    </div>
+    <p class="pullline">Data sources provide the information. CarrierBasis preserves the decision.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="flow" id="how">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">How it works</p>
+    <h2>From carrier knowledge to sealed record, in one flow.</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Know the carrier</h3>
+        <p>Authority, safety history, insurance, TMS data, documents, and your team's prior investigations — together in one living carrier record.</p>
+      </div>
+      <div class="step">
+        <h3>Check against the load</h3>
+        <p>At commitment, CarrierBasis refreshes critical facts and applies your policy to this carrier and this shipment — cargo value, coverage, dates, your rules.</p>
+      </div>
+      <div class="step">
+        <h3>Review and decide</h3>
+        <p>Material concerns are presented with context. AI assists the review; it never approves the carrier. A named reviewer resolves the issues and records the basis for the decision.</p>
+      </div>
+      <div class="step">
+        <h3>Seal it</h3>
+        <p>Policy, sources, timestamps, findings, resolutions, reviewer, reasoning, and decision — locked into a load-specific compliance record and fingerprinted.</p>
+      </div>
+    </div>
+    <p class="aside">A carrier that was fine at onboarding may not be fine today. The check happens at decision time — because that's the moment that gets examined. <a href="demo.html">Watch it happen — 60-second demo →</a></p>
+  </div>
+</section>
+
+<!-- ============ THE ARTIFACT ============ -->
+<section class="artifact" id="record">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#9DBBDD;margin-bottom:14px">The artifact</p>
+    <h2>Every load gets a carrier compliance record.</h2>
+    <p class="lede">Not another carrier score. Not another data feed. A complete, load-specific record of the decision:</p>
+    <div class="artifact-grid">
+      <ul class="contents">
+        <li><strong>The standard applied</strong> — your policy, by version.</li>
+        <li><strong>The information reviewed</strong> — every source, with retrieval timestamps.</li>
+        <li><strong>The concerns identified</strong> — and how each was resolved, by whom, on what evidence.</li>
+        <li><strong>The carrier's review history</strong> — prior investigations and determinations, preserved with dates and authorship.</li>
+        <li><strong>The decision</strong> — made by a named, authenticated reviewer, in their own words.</li>
+        <li><strong>The seal</strong> — a SHA-256 fingerprint for verifying the record hasn't changed since commitment.</li>
+      </ul>
+      <!-- Stylized specimen card (fictional data). Replace or augment with real specimen PDF link when produced. -->
+      <figure class="record" aria-labelledby="sample-record-title">
+        <figcaption id="sample-record-title" class="sr-only">Fictional sample carrier compliance record produced by CarrierBasis carrier vetting software</figcaption>
+        <div class="r-head">
+          <div>
+            <div class="r-title">CARRIER COMPLIANCE RECORD</div>
+            <div class="r-sub">Meridian Haulage LLC · MC-0000000</div>
+          </div>
+          <span class="seal-chip">SEALED</span>
+        </div>
+        <dl>
+          <dt>Load</dt><dd>LD-20260728-114 · Elgin, IL → Columbus, OH</dd>
+          <dt>Policy</dt><dd>Broker policy v4 · high-value tier</dd>
+          <dt>Sources</dt><dd>FMCSA · TMS · COI — refreshed 14:29 CT</dd>
+          <dt>Findings</dt><dd>2 reviewed · 2 resolved</dd>
+          <dt>Reviewer</dt><dd>D. Alvarez (authenticated)</dd>
+        </dl>
+        <p class="r-quote">"Cargo coverage verified at $250,000 against declared value $180,000. Prior name-discrepancy resolution reconfirmed. Approved for this load."</p>
+        <div class="r-foot">SHA-256 9f3a71c8…d4c214 · Sealed Jul 28, 2026 · 14:32 CT</div>
+      </figure>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="carrierbasis-sample-compliance-record.pdf">View the full sample record (PDF)</a>
+      <a class="btn btn--ghost" href="demo.html">Watch the 60-second demo</a>
+    </div>
+    <p style="margin-top:22px;font-size:14.5px;color:#9DBBDD">Exportable as a PDF your attorney, insurer, customer, or auditor can read without a demo. Sample shown uses fictional data.</p>
+  </div>
+</section>
+
+<!-- ============ LEGAL CONTEXT ============ -->
+<section class="legal-ctx" id="montgomery">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Why now</p>
+    <h2>The Supreme Court opened the door. Your process is what's on the other side.</h2>
+    <p>In <em>Montgomery v. Caribe Transport</em>, the Supreme Court held that federal law does not categorically block state-law claims that a freight broker negligently selected an unsafe carrier. The Court did not hand brokers a checklist — it opened the door for a broker's carrier-selection process to be examined under state negligence law.</p>
+    <p>That changes what "vetting" means. Having checked a carrier and being able to show it are different things. You may need to show what you checked, when you checked it, what you found, and why you decided — for the specific load, at the moment you committed.</p>
+    <p class="readmore"><a href="montgomery-decision-freight-brokers.html">What the Montgomery decision means for freight brokers →</a></p>
+  </div>
+</section>
+
+<!-- ============ CADENCE ============ -->
+<section class="cadence" id="cadence">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Cadence</p>
+    <h2>Carrier vetting is not a one-time event.</h2>
+    <p class="lede">Courts haven't published a required refresh interval. But the question that keeps coming back: was your information reasonably current when you decided?</p>
+    <table>
+      <thead><tr><th scope="col">When</th><th scope="col">What a defensible process does</th></tr></thead>
+      <tbody>
+        <tr><td>At onboarding</td><td>Establish identity, authority, insurance, and safety baseline.</td></tr>
+        <tr><td>Between loads</td><td>Keep the carrier record current; investigate and document concerns as they arise.</td></tr>
+        <tr><td>Before every load</td><td>Refresh critical facts and record why this carrier is appropriate for this shipment.</td></tr>
+        <tr><td>During the load</td><td>Reconcile who is actually hauling the freight against who was vetted.</td></tr>
+        <tr><td>After commitment</td><td>Preserve the complete point-in-time record, unaltered.</td></tr>
+      </tbody>
+    </table>
+    <p class="links">
+      <a href="how-often-recheck-carriers.html">How often should brokers recheck a carrier? →</a>&nbsp;&nbsp;&nbsp;
+      <a href="what-to-check-before-every-load.html">What should brokers check before every load? →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ FIT ============ -->
+<section class="fit" id="fit">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Who it's for</p>
+    <h2>Built for brokerages without a compliance department.</h2>
+    <p class="lede">Enterprise brokers have counsel, compliance staff, and custom systems. If you're running a small or mid-size brokerage, you have a TMS, some data subscriptions, and whatever discipline survives a busy Friday afternoon. CarrierBasis puts compliance discipline into the daily workflow:</p>
+    <ul>
+      <li><strong>Works alongside the tools you already use</strong> — it organizes and preserves your process; it doesn't ask you to rip anything out.</li>
+      <li><strong>Syncs with your TMS</strong> so carriers and loads don't get re-keyed.</li>
+      <li><strong>Runs your policy consistently</strong> — the same on the busiest day of the quarter as in a demo.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow" style="color:var(--nw-blue);margin-bottom:14px">Questions</p>
+    <h2>Fair questions, straight answers.</h2>
+    <details>
+      <summary>Does CarrierBasis replace Highway, Carrier411, or my other data tools?</summary>
+      <p>No. Those services provide information about carriers. CarrierBasis applies your policy to the information you have, guides the review, and preserves the decision as a sealed, load-specific record. Most brokerages keep their existing data subscriptions.</p>
+    </details>
+    <details>
+      <summary>Is this legal advice? Does it guarantee protection from liability?</summary>
+      <p>No. CarrierBasis is software, not counsel, and no process eliminates the risk of being sued. What it does is make your carrier-selection process consistent, complete, and preserved — organized around the safety factors courts are examining in broker negligent-selection cases.</p>
+    </details>
+    <details>
+      <summary>What does "sealed" mean?</summary>
+      <p>Sealed means locked at approval and fingerprinted with a SHA-256 hash. Any later change to the record's contents would no longer match the fingerprint — so the record can be verified as unchanged since commitment.</p>
+    </details>
+    <details>
+      <summary>Who is recorded as the decision-maker?</summary>
+      <p>The logged-in reviewer who approved the record — a named, authenticated user, not a shared login or a blank field. Their written basis for the decision is part of the sealed record.</p>
+    </details>
+    <details>
+      <summary>What if a carrier has a problem in its history?</summary>
+      <p>An isolated concern does not automatically disqualify a carrier — but it should be reviewed in context and resolved on the record. CarrierBasis is built for real carriers with real histories: it documents the judgment rather than hiding everything behind a green light.</p>
+    </details>
+    <details>
+      <summary>How long does a vetting take?</summary>
+      <p>Facts are pulled and evaluated automatically — FMCSA authority, safety and inspection history, your TMS data, submitted documents — so the reviewer's time goes to judgment, not data gathering. Routine approvals take a few minutes. Reviews involving material concerns take longer — because the reviewer is exercising judgment, not clearing another screen.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="close" id="close">
+  <div class="wrap">
+    <h2>The courts didn't give brokers a checklist. They gave you questions.</h2>
+    <p class="questions">What did you check? How current was it? What concerns were visible? How did you evaluate them? Why this carrier, for this load? Can you show it?</p>
+    <div class="transcript">
+      <span class="q-mark">A.</span>
+      <p class="a-text">CarrierBasis makes sure the answers already exist — written, dated, attributed, and preserved.</p>
+    </div>
+    <p class="tagline">Vetting you can operate. <span class="accent">Decisions you can prove.</span></p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="#record">View a sample compliance record</a>
+      <a class="btn btn--ghost" href="mailto:contact@workanewway.com?subject=CarrierBasis%20walkthrough">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#C6D6E8">CarrierBasis</strong> is a product of <a href="https://www.workanewway.com">NewWay Digital</a>.</p>
+    <p>CarrierBasis provides software for organizing, applying, and documenting a brokerage's carrier-selection process. It does not provide legal advice, does not establish or certify compliance with any legal standard, and does not guarantee any outcome in litigation. Descriptions of court decisions are informational summaries, not legal analysis. Sample records shown use fictional data.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="security.html">Security</a> · <a href="mailto:contact@workanewway.com">Contact</a></p>
+    <p>© 2026 NewWay Digital</p>
+  </div>
+</footer>
+
+</body>
+</html>
