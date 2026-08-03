@@ -55,12 +55,12 @@
 
 <main>
   <h1>Security</h1>
-  <p class="meta">Updated August 2, 2026</p>
+  <p class="meta">Updated August 3, 2026</p>
 
   <p>CarrierBasis exists to produce records a brokerage may one day need to stand behind. That only works if the data underneath is protected and the records themselves can be trusted. This page describes how we approach both.</p>
 
   <h2>Certified infrastructure</h2>
-  <p>CarrierBasis is hosted entirely on infrastructure whose providers hold SOC 2 Type 2 attestations and ISO 27001 certifications — covering our application hosting, database, file storage, and AI processing. To be precise about what that claim means: those certifications belong to our infrastructure providers and cover the platforms the Service runs on; NewWay Digital does not itself hold these certifications. We select providers on this basis deliberately, and we're glad to identify our current providers and their certifications to customers on request.</p>
+  <p>CarrierBasis is hosted entirely on infrastructure whose providers hold SOC 2 Type 2 attestations and ISO 27001 certifications — covering our application hosting, database, file storage, AI processing, and error monitoring. To be precise about what that claim means: those certifications belong to our infrastructure providers and cover the platforms the Service runs on; NewWay Digital does not itself hold these certifications. We select providers on this basis deliberately, and we're glad to identify our current providers and their certifications to customers on request.</p>
 
   <h2>Encryption</h2>
   <ul>
@@ -84,6 +84,10 @@
     <li>Customer content is used to provide the Service to the customer it belongs to — not for advertising.</li>
     <li>Carriers referenced by sealed records are never deleted from underlying storage in a way that would orphan the evidence; removal from view is presentational.</li>
   </ul>
+
+  <h2>Operational monitoring</h2>
+  <p>So that failures are noticed quickly rather than discovered later, CarrierBasis reports application errors to a third-party error-monitoring service. What that service receives is deliberately narrow: the error, the operation that produced it, and identifiers such as a brokerage's tenant identifier or an internal record id — not the records those identifiers point to. Carrier data, policy settings, documents, and sealed record contents are not sent. Authorization headers, API keys, tokens, passwords and stored credentials are stripped before anything leaves the platform.</p>
+  <p>Our error-monitoring provider holds SOC 2 Type 2 and ISO 27001 certifications and processes this data under a data processing agreement. Error monitoring observes the Service; it is never a path by which a record can be altered.</p>
 
   <h2>Reporting a vulnerability</h2>
   <p>If you believe you've found a security issue in the Site or Service, please email <a href="mailto:contact@workanewway.com?subject=Security%20report">contact@workanewway.com</a> with "Security report" in the subject. We appreciate good-faith reports and will respond promptly. Please don't access data that isn't yours or disrupt the Service while investigating.</p>
